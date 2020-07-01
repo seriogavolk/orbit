@@ -83,11 +83,11 @@ body {
 }    
 
 .articleframe {
-    background-color: transparent;
+    background-color: #f7f8fc;
     margin: 3rem 10% 3rem 10%;
     border-radius: 6px 6px 6px 6px;
     width: auto;
-    height: 200vh;
+    height: auto;
     border: 1px solid black;
     box-shadow: 3px 4px 4px rgb(85, 82, 82);
 
@@ -109,28 +109,33 @@ body {
     
 }
 .posend {
-    flex: 2 1 50%;
+    
     margin-top: 2rem;
     align-self: flex-end;
+    flex-shrink: 1;
 }
 
 
 .card1 {
-    width: 35%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    background-color: transparent;
+    width: 32%;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,0.4);
     transition: 0.3s;
     border-radius: 5px;
     text-align: center;
     padding: 8rem;
+    transition: all .3s ease-in-out;
+
     
 }
-.card1:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.card1:hover {  
+    box-shadow: 0 20px 25px 0 rgba(0,0,0,0.2); 
+    transform: translate3d( 5px, 5px, 0px); 
 }    
 
 .card2 {
-    /* width: 35%; */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    width: 32%;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,0.4);
     transition: 0.3s;
     padding: 2px 16px;
     border-radius: 5px;
@@ -138,20 +143,23 @@ body {
     padding: 8rem;
 }
 .card2:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 20px 25px 0 rgba(0,0,0,0.2);
 } 
 
 .card3 {
     margin-top: 2rem;
-    width: 35%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    margin-bottom: 0.5rem;
+    width: 32%;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,0.4);
     transition: 0.3s;
     padding: 2px 16px;
     border-radius: 5px;
     text-align: center;
     padding: 8rem;
+    /* border: 0.1mm solid rgb(38, 39, 39); */
     
 }
 .card3:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+    transform: translate3d( 5px, 5px, 0px);
 } 

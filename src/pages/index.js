@@ -9,6 +9,7 @@ import Article from '../components/articles';
 
 
 
+
 const IndexPage = () => (
   <>
     <SEO title="Home" />

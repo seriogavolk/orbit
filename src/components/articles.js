@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import SEO from "../components/seo"
 
 
+
 const Article = () => {
     return (
         <>
