@@ -6,6 +6,9 @@ import Hero from '../components/hero';
 import SEO from "../components/seo"
 import '../styles/main.css';
 import Article from '../components/articles';
+import ContactForm from '../components/contact';
+import Footer from '../components/footer';
+
 
 
 
@@ -14,6 +17,8 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Hero />
     <Article />
+    <ContactForm />
+    <Footer />
   </>
 )
 
