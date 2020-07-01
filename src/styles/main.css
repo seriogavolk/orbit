@@ -87,7 +87,7 @@ body {
     margin: 3rem 10% 3rem 10%;
     border-radius: 6px 6px 6px 6px;
     width: auto;
-    height: 100vh;
+    height: 185vh;
     border: 1px solid black;
     box-shadow: 3px 4px 4px rgb(85, 82, 82);
 
@@ -100,3 +100,51 @@ body {
     flex-direction: column;
     text-align: center;
 }
+
+.card1 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.3s;
+    border-radius: 5px;
+    text-align: center;
+    padding: 8rem;
+    margin-left: 700px;
+    margin-right: 300px;
+    margin-bottom: 10vh;
+    margin-top: 2vh;
+    
+}
+.card1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}    
+
+.card2 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.3s;
+    padding: 2px 16px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 8rem;
+    margin-left: 700px;
+    margin-right: 300px;
+    margin-bottom: 10vh;
+    margin-top: 2vh;
+}
+.card2:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} 
+
+.card3 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.3s;
+    padding: 2px 16px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 8rem;
+    margin-left: 700px;
+    margin-right: 300px;
+    margin-bottom: 10vh;
+    margin-top: 2vh;
+}
+.card3:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} 
