@@ -5,11 +5,27 @@ const ContactForm = () => {
     return (
         <div className='contactwrap'>
         <div className='formframe'>
+        
             <div id='inquiry' >
-                <h2>Request a Free Quote</h2>
-                <label htmlFor='firstname'>First Name</label>
-                <input type='text' name='firstname' id='first-name' value='name' placeholder='Enter your first name'/>
-                {}
+                <h2>Request a Free Quote</h2> 
+
+
+                <div className='form1'>
+                <input type='text' 
+                name='firstname' 
+                id='first-name' 
+                autoComplete='off' 
+                required
+                />
+                <label htmlFor='firstname' className='label-name'>
+                    <span className='content-name'>Name</span>
+                </label>
+                
+                </div>
+                
+                
+                
+                {/* {}
                 <label htmlFor='lastname'>First Name</label>
                 <input type='text' name='firstname' id='first-name' value='name' placeholder='Enter your last name'/>
                 {}
@@ -24,7 +40,7 @@ const ContactForm = () => {
                 <label htmlFor='message'>Message:</label>
                 <input type='text' name='message' id='first-message' value='message' placeholder={`What's on your mind?`}/>
                 {}
-                <button className='btn1 eff' form='inquiry' type='submit' >Submit</button>
+                <button className='btn1 eff' form='inquiry' type='submit' >Submit</button> */}
 
             </div>
             </div>
