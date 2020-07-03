@@ -6,8 +6,9 @@ const ContactForm = () => {
     const [lastname, setLastName] = useState('');
     const [number, setNumber] = useState('');
     const [message, setMessage] = useState('');
-
-
+    const [clicked, setOnClick] = useState('');
+    const sendForm = [{name, lastname,number, message}]
+    const form = sendForm.map(form => form);
     return (
         <div className='contactwrap'>
         <div className='formframe'>
@@ -15,7 +16,7 @@ const ContactForm = () => {
             <div id='inquiry' >
                 <h2>Request a Free Quote</h2> 
                 <p>{`We would love to hear from you ${name} ${lastname}`}</p>
-
+                <p>{`Your email is ${form}`}</p>
 
                 <div className='form1'>
                 <input type='text' 
@@ -73,7 +74,12 @@ const ContactForm = () => {
                 </label>
                 </div>
                 
-                <button className='btn1 eff' form='inquiry' type='submit' >Submit</button>
+                <button 
+                className='btn1 eff' 
+                form='inquiry' 
+                type='submit' 
+                onClick={(event) => setOnClick(clicked)}
+                >Submit</button>
                 
                 
                 {/* {}
