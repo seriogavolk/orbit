@@ -1,29 +1,42 @@
-import React, {useState} from 'react';
+import React, {useState, Component} from 'react';
+import {useForm} from 'react-hook-form';
 
 const ContactForm = () => {
 
-    const [name, setName] = useState('');
-    const [lastname, setLastName] = useState('');
-    const [number, setNumber] = useState('');
-    const [message, setMessage] = useState('');
-    const [clicked, setOnClick] = useState('');
-    const sendForm = [{name, lastname,number, message}]
-    const form = sendForm.map(form => form);
+    // const [name, setName] = useState('');
+    // const [lastname, setLastName] = useState('');
+    // const [number, setNumber] = useState('');
+    // const [message, setMessage] = useState('');
+    // const [clicked, setOnClick] = useState('');
+    // const sendForm = [{name, lastname,number, message}]
+    // const form = sendForm.map(form => form);
+
+const {register, handleSubmit} = useForm();
+const [inputs, setInputs] = useState([])
+const onSubmit = (data) => {
+    const inputs = (JSON.stringify(data));
+    console.log(inputs);
+
+   
+}
+    // const params = data.map((form) => 
+    //     console.log(params);
+   
+
     return (
         <div className='contactwrap'>
         <div className='formframe'>
         
-            <div id='inquiry' >
+            <form onSubmit={handleSubmit(onSubmit)} id='inquiry' >
                 <h2>Request a Free Quote</h2> 
-                <p>{`We would love to hear from you ${name} ${lastname}`}</p>
-                <p>{`Your email is ${form}`}</p>
+                {/* {data.map(param => (<p>{`We would love to hear from you ${param.firstname}`}</p>))} */}
+                 
 
                 <div className='form1'>
                 <input type='text' 
                 name='firstname' 
                 id='first-name' 
-                value={name}
-                onChange={event => setName(event.target.value)}
+                ref={register}
                 autoComplete='off' 
                 required
                 />
@@ -38,8 +51,7 @@ const ContactForm = () => {
                 id='last-name' 
                 autoComplete='off' 
                 required
-                value={lastname}
-                onChange={event => setLastName(event.target.value)}
+                ref={register}
                 
                 />
                 <label id='last-name' htmlFor='last-name' className='label-name'>
@@ -47,14 +59,10 @@ const ContactForm = () => {
                 </label>
                 </div>
                 <div className='form1'>
-                <input type='tel' 
-                name='phone' 
-                id='phone' 
-                autoComplete='off' 
-                required
-                pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
-                value={number}
-                onChange={event => setNumber(event.target.value)}
+                <input type='text' 
+                name='phone'
+                id='phone'  
+                ref={register}
                 />
                 <label id='phone' htmlFor='phone' className='label-name'>
                     <span className='content-name'>Phone Number</span>
@@ -66,8 +74,7 @@ const ContactForm = () => {
                 id='message' 
                 autoComplete='off' 
                 required
-                value={message}
-                onChange={event => setMessage(event.target.value)}
+                ref={register}
                 />
                 <label id='message' htmlFor='message' className='label-name'>
                     <span className='content-name'>Message</span>
@@ -78,7 +85,6 @@ const ContactForm = () => {
                 className='btn1 eff' 
                 form='inquiry' 
                 type='submit' 
-                onClick={(event) => setOnClick(clicked)}
                 >Submit</button>
                 
                 
@@ -99,10 +105,10 @@ const ContactForm = () => {
                 {}
                 <button className='btn1 eff' form='inquiry' type='submit' >Submit</button> */}
 
-            </div>
+            </form>
             </div>
         </div>
-    )
+    );
 };
 
 export default ContactForm;
